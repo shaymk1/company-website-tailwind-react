@@ -1,0 +1,24 @@
+import { FaBars, FaTimes } from "react-icons/fa";
+
+
+{/*icons*/}
+					<div className="md:hidden">
+						<FaTimes size={25} />
+						<FaBars size={25} />
+					</div>
+
+	<div
+					onClick={handleClick}
+					className="block items-center px-6 uppercase font-bold mx-auto   ml-9 mt-8">
+					{linkTags.map(({ id, link }) => {
+						return (
+							<ul>
+								<li key={id}>
+									<a className="" href={`/#${link}`}>
+										{link}
+									</a>
+								</li>
+							</ul>
+						);
+					})}
+				</div>                    
