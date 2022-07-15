@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
@@ -15,13 +16,13 @@ const Navbar = () => {
 
 		{
 			id: 3,
-			link: "About",
+			link: "Features",
 		},
 
-		{
-			id: 3,
-			link: "Use Defi",
-		},
+		// {
+		// 	id: 3,
+		// 	link: "Use Defi",
+		// },
 
 		{
 			id: 3,
@@ -29,38 +30,64 @@ const Navbar = () => {
 		},
 	];
 
-	// const handleClick = () => {
-	// 	setNav(!nav);
-	// };
+	const handleNav = () => {
+		setNav(!nav);
+	};
 	return (
 		<header>
 			{/*container-all*/}
 
 			<div className="h-[90px]  w-full ">
 				{/*container-left-side*/}
-				<div className="max-w-[1240px] mx-auto uppercase font-extrabold flex justify-between text-white">
+				<div className="max-w-[1240px] mx-auto uppercase font-extrabold flex justify-between text-white items-center h-full border border-b-[#00acc1] ">
 					{/*logo*/}
-					<div className="text-[#00acc1] ">
-						<h1>defi.</h1>
+					<div className="text-[#00acc1] pl-4 ">
+						<h1 className="  font-extrabold text-3xl">defi.</h1>
 					</div>
 
 					{/*container-right-side*/}
-					<div className="  ">
+					<div className="hidden md:flex items-center pr-6 ">
 						{linkTags.map(({ id, link }) => {
 							return (
-								<ul className="">
+								<ul className=" ">
 									<li key={id}>
-										<a className="" href={`/#${link}`}>
+										<a className="font-montserrat" href={`/#${link}`}>
 											{link}
 										</a>
 									</li>
 								</ul>
 							);
 						})}
+						<button className="px-4 py-2 rounded-md">Use Defi</button>
+					</div>
+
+					{/*mobile-icons*/}
+					<div
+						onClick={handleNav}
+						className="block md:hidden items-center  pr-4">
+						{nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+					</div>
+					{/*mobile-menu*/}
+					<div
+						className={
+							nav
+								? "w-full absolute top-[90px] left-0  block justify-center text-center md:hidden"
+								: "absolute left-[-100%]"
+						}>
+						{linkTags.map(({ id, link }) => {
+							return (
+								<ul className="py-2 ">
+									<li key={id}>
+										<a className="text-xl font-montserrat" href={`/#${link}`}>
+											{link}
+										</a>
+									</li>
+								</ul>
+							);
+						})}
+						<button className="px-4 py-2 rounded-md  mt-2">Use Defi</button>
 					</div>
 				</div>
-
-				{/*mobile-links*/}
 			</div>
 		</header>
 	);

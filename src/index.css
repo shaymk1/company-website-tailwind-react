@@ -1,13 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Coiny&family=Montserrat:ital,wght@0,400;1,600&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Coiny&family=Kanit:wght@400;600;700;800&family=Montserrat:ital,wght@0,400;1,600&family=Poppins&display=swap');
 
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+:root 
+{
+    --primary-blue:#00d8ff;
+    --primary-purple:#6a00ff;
+}
+
 body {
     background-color:black;
     color:white;
     font-family: 'Montserrat', sans-serif;
-    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+@layer base{
+    h1{
+        @apply font-[kanit]
+    }
+    li{
+        @apply px-4 font-[kanit]
+    }
+
+    button{
+        @apply bg-gradient-to-r from-[var(--primary-purple)] to-[var(--primary-blue)] font-[kanit]
+    }
+
+   
 }
