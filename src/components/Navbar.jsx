@@ -5,11 +5,6 @@ const Navbar = () => {
 	const [nav, setNav] = useState(false);
 	const linkTags = [
 		{
-			id: 1,
-			link: "Developers",
-		},
-
-		{
 			id: 2,
 			link: "Platform",
 		},
@@ -19,14 +14,14 @@ const Navbar = () => {
 			link: "Features",
 		},
 
-		// {
-		// 	id: 3,
-		// 	link: "Use Defi",
-		// },
-
 		{
 			id: 3,
 			link: "Community",
+		},
+
+		{
+			id: 1,
+			link: "Developers",
 		},
 	];
 
@@ -41,7 +36,7 @@ const Navbar = () => {
 				{/*container-left-side*/}
 				<div className="max-w-[1240px] mx-auto uppercase font-extrabold flex justify-between text-white items-center h-full  ">
 					{/*logo*/}
-					<div className="text-[#00acc1] pl-4 ">
+					<div className="text-[#00acc1] pl-4 cursor-pointer hover:text-white">
 						<h1 className="  font-extrabold text-3xl">defi.</h1>
 					</div>
 
@@ -51,14 +46,17 @@ const Navbar = () => {
 							return (
 								<ul className=" ">
 									<li key={id}>
-										<a className="font-montserrat" href={`/#${link}`}>
+										<a
+											className="font-montserrat hover:text-[#00acc1]"
+											href={`/#${link}`}>
 											{link}
 										</a>
 									</li>
 								</ul>
 							);
 						})}
-						<button className="px-4 py-2 rounded-md hover:bg-indigo-500  bg-gradient-to-r from-[var(--primary-purple)] to-[var(--primary-blue)] font-[kanit]">
+						<button className="px-4 py-2 rounded-md hover:bg-indigo-500  bg-gradient-to-r from-[var(--primary-purple)] to-[var(--primary-blue)] font-[kanit]
+						cursor-pointer">
 							Use Defi
 						</button>
 					</div>

@@ -26,6 +26,9 @@ body {
     li{
         @apply px-4 font-[kanit]
     }
+    html{
+    @apply scroll-smooth
+    }
 
    
 
