@@ -27,9 +27,7 @@ body {
         @apply px-4 font-[kanit]
     }
 
-    button{
-        @apply bg-gradient-to-r from-[var(--primary-purple)] to-[var(--primary-blue)] font-[kanit]
-    }
+   
 
    
 }
