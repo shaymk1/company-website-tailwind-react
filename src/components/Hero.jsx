@@ -14,14 +14,15 @@ const Hero = () => {
 			</div>
 			{/* content*/}
 			<div className="w-full h-[90%] mx-auto  text-center text-white pt-20 mt-20 py-4">
-				<h1 className="uppercase text-3xl">decentralized </h1>
+			
 				<h1 className="uppercase text-3xl mb-2">
-					<span className="text-[#00acc1] uppercase font-[kanit] font-bold pb-2">
+				decentralized
+					<span className="text-[#00acc1] uppercase font-[kanit] font-bold pb-2 mx-2">
 						trading
 					</span>{" "}
 					protocol
 				</h1>
-				<p className="text-xs text-slate-100 pb-3 flex-wrap ">
+				<p className="text-xs text-slate-100 pb-3  ">
 					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, saepe!
 					Doloribus ipsum provident minus nobis delectus aut
 				</p>
