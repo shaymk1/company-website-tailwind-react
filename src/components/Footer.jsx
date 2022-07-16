@@ -1,5 +1,3 @@
-import React from "react";
-
 const Footer = () => {
 	const footerMenu = [
 		{
@@ -30,21 +28,25 @@ const Footer = () => {
 		{
 			id: 1,
 			link: "facebook",
+			url: "https://www.facebook.com/",
 		},
 
 		{
 			id: 2,
 			link: "twitter",
+			url: "https://twitter.com/home",
 		},
 
 		{
 			id: 3,
 			link: "Instagram",
+			url: "https://www.instagram.com/",
 		},
 
 		{
 			id: 4,
 			link: "email",
+			url: "https://mail.google.com/",
 		},
 	];
 
@@ -59,7 +61,9 @@ const Footer = () => {
 						return (
 							<div>
 								<ul>
-									<li key={id}>{list}</li>
+									<li className="cursor-pointer hover:text-[#00acc1]" key={id}>
+										{list}
+									</li>
 								</ul>
 							</div>
 						);
@@ -71,11 +75,17 @@ const Footer = () => {
 						Contact Us
 					</h3>
 
-					{socialMedia.map(({ id, link }) => {
+					{socialMedia.map(({ id, link, url }) => {
 						return (
 							<div>
 								<ul>
-									<li key={id}>{link}</li>
+									<li key={id}>
+										<a
+											className="cursor-pointer hover:text-[#00acc1]"
+											href={url}>
+											{link}
+										</a>
+									</li>
 								</ul>
 							</div>
 						);

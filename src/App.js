@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer"
 import Subscribe from "./components/Subscribe";
+
 function App() {
 	return (
 		<div>

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-
 const Navbar = () => {
 	const [nav, setNav] = useState(false);
 	const linkTags = [
@@ -42,20 +41,21 @@ const Navbar = () => {
 
 					{/*container-right-side*/}
 					<div className="hidden md:flex items-center pr-6 ">
-						{linkTags.map(({ id, link }) => {
+						{linkTags.map((menu) => {
 							return (
 								<ul className=" ">
-									<li key={id}>
+									<li key={menu.id}>
 										<a
 											className="font-montserrat hover:text-[#00acc1]"
-											href={`/#${link}`}>
-											{link}
+											href={`/#${menu.link}`}>
+											{menu.link}
 										</a>
 									</li>
 								</ul>
 							);
 						})}
-						<button className="px-4 py-2 rounded-md hover:bg-indigo-500  bg-gradient-to-r from-[var(--primary-purple)] to-[var(--primary-blue)] font-[kanit]
+						<button
+							className="px-4 py-2 rounded-md hover:bg-indigo-500  bg-gradient-to-r from-[var(--primary-purple)] to-[var(--primary-blue)] font-[kanit]
 						cursor-pointer">
 							Use Defi
 						</button>
